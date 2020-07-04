@@ -1,0 +1,50 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>ПРАКТИКА 1</title>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        function change(){
+            let Happy = document.getElementById('status').checked;
+
+            let label = document.getElementById('label');
+
+            let path = document.getElementById('path');
+
+            if(Happy){
+                path.setAttribute('d', 'M 150 200 Q 225 300 300 200');
+
+                label.innerHTML = "Happy";
+            } else{
+                path.setAttribute('d', 'm 200 230 c 50 -100 100 -10 140 0');
+
+                label.innerHTML = "Sad";
+            }
+        }
+    </script>
+</head>
+    <body>
+    <input type="checkbox" id="status" name="status" value="Smile" onclick="change()" checked>
+    <label for="status" id="label">Happy</label><br>
+        <svg width="500" height="300">
+            <g>
+               <circle cx="250" cy="150" r="150" fill="yellow">
+                </circle>
+                <ellipse cx="300" cy="100" rx="25" ry="50" 
+                    fill="black"></ellipse>
+                <path stroke="black" fill="none"
+                    d="M 150 200 Q 225 300 300 200" id="path">
+                </path>
+                <ellipse class="left-eye" cx="175" cy="110" rx="25" ry="50"
+                    fill="black">
+                </ellipse>
+                <rect x="150" y="100" width="50" height="25"
+                    fill="black"></rect> 
+            </g>
+        </svg>
+        <script type="text/javascript" src="js/index.js">
+      
+        </script>
+    </body>
+</html>
